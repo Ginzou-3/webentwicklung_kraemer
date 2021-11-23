@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="51cb6557-3969-4182-921e-a2bf89118c1f" name="WE Lokal" url="http://127.0.0.1">
+        <fileTransfer mountedRoot="D:\Program Files\xamp\htdocs\WE_Lokal" accessType="MOUNT" port="0" />
+      </webServer>
+      <webServer id="5e679949-14cc-4450-aca8-463c90b8b5cb" name="WE SFTP" url="we-kraemer.000webhostapp.com">
+        <fileTransfer accessType="SFTP" host="files.000webhost.com" port="21" sshConfigId="807a17f6-b44f-4f94-9ce5-d581e7267475" sshConfig="we-kraemer@files.000webhost.com:21 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

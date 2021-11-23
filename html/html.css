@@ -1,0 +1,9 @@
+.jumbotron{
+    text-align: center;
+}
+.card{
+    margin: 0.5em;
+}
+#card1{
+    alignment: left;
+}
