@@ -1,9 +1,28 @@
 .jumbotron{
     text-align: center;
 }
-.card{
-    margin: 0.5em;
+#navBar{
+    list-style: none;
+    color: cornflowerblue;
+    border: black;
 }
-#card1{
-    alignment: left;
+
+.col-2{
+    color: cornflowerblue;
 }
+
+.navBar{
+    list-style: none;
+}
+
+.navBarInd{
+    border: solid lightgray 0.001em;
+    padding: 0.3em 7em 0.3em 0.85em;
+}
+
+.navBarGer{
+    border: solid lightgrey 0.001em;
+    margin-left: 2em;
+    padding: 0.3em 0.5em 0.5em 0.7em;
+}
+
