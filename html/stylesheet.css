@@ -4,7 +4,6 @@
 #navBar{
     list-style: none;
     color: cornflowerblue;
-    border: black;
 }
 
 .col-2{
@@ -17,12 +16,13 @@
 
 .navBarInd{
     border: solid lightgray 0.001em;
-    padding: 0.3em 7em 0.3em 0.85em;
+    padding: 0.3em 8em 0.3em 0.85em;
+    position: relative;
 }
 
 .navBarGer{
     border: solid lightgrey 0.001em;
     margin-left: 2em;
     padding: 0.3em 0.5em 0.5em 0.7em;
+    position: relative;
 }
-
