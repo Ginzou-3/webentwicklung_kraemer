@@ -15,16 +15,19 @@ class PersonenModel extends Model{
 
     public function login(){
         $this->personen = $this->db->table('mitglieder');
-        $this->personen->select('password');
-        $this->personen->where('mitglieder.email', $_POST['email']);
+        $this->personen->select('Password');
+        $this->personen->where('mitglieder.EMail', $_POST['email']);
         $result = $this->personen->get();
 
         return $result->getRowArray();
     }
 
-    public function date(){
-        $result = $this->db->query('SELECT datumvon, datumbis FROM dokumente WHERE produktid = id');
-        return $result->getResultArray();
+    public function date($produkt_id){
+        $result = $this->db->query('SELECT datumvon, datumbis 
+                                        FROM dokumente 
+                                        INNER JOIN dokumentenpositionen ON dekomentenpositionen.dokumenteid = dokumente.id 
+                                        WHERE $produktid = id');
+        return $result->getRowArray();
     }
 
 }
