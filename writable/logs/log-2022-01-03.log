@@ -1,0 +1,153 @@
+CRITICAL - 2022-01-03 10:31:09 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\codeigniter\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\codeigniter\public\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-01-03 10:55:13 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\codeigniter\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\codeigniter\public\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-01-03 11:01:34 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\codeigniter\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\codeigniter\public\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-01-03 11:04:52 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\codeigniter\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\codeigniter\public\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-01-03 11:05:01 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\codeigniter\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\codeigniter\public\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-01-03 11:12:48 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\codeigniter\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\codeigniter\public\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-01-03 11:14:43 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\codeigniter\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\codeigniter\public\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-01-03 11:15:05 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\codeigniter\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\codeigniter\public\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-01-03 11:15:24 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\codeigniter\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\codeigniter\public\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-01-03 04:16:09 --> include(Head.html): Failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\codeigniter\app\Views\Login.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(Head.ht...', 'C:\\xampp\\htdocs...', 4)
+#1 C:\xampp\htdocs\codeigniter\app\Views\Login.php(4): include()
+#2 C:\xampp\htdocs\codeigniter\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('Login', Array, true)
+#5 C:\xampp\htdocs\codeigniter\app\Controllers\Login.php(9): view('Login')
+#6 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(824): App\Controllers\Login->index()
+#7 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniter\public\index.php(42): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-01-03 04:19:33 --> include(Views/templates/Head.html): Failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\codeigniter\app\Views\Login.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(Views/t...', 'C:\\xampp\\htdocs...', 4)
+#1 C:\xampp\htdocs\codeigniter\app\Views\Login.php(4): include()
+#2 C:\xampp\htdocs\codeigniter\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('Login', Array, true)
+#5 C:\xampp\htdocs\codeigniter\app\Controllers\Login.php(9): view('Login')
+#6 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(824): App\Controllers\Login->index()
+#7 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniter\public\index.php(42): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-01-03 04:19:55 --> include(Navbar.html): Failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\codeigniter\app\Views\Login.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(Navbar....', 'C:\\xampp\\htdocs...', 20)
+#1 C:\xampp\htdocs\codeigniter\app\Views\Login.php(20): include()
+#2 C:\xampp\htdocs\codeigniter\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\codeigniter\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('Login', Array, true)
+#5 C:\xampp\htdocs\codeigniter\app\Controllers\Login.php(9): view('Login')
+#6 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(824): App\Controllers\Login->index()
+#7 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codeigniter\public\index.php(42): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-01-03 06:45:42 --> Invalid file: templates/Head.php
+#0 C:\xampp\htdocs\codeigniter\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/Head....')
+#1 C:\xampp\htdocs\codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('templates/Head', Array, true)
+#2 C:\xampp\htdocs\codeigniter\app\Controllers\Aufgaben.php(9): view('templates/Head')
+#3 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(824): App\Controllers\Aufgaben->index()
+#4 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aufgaben))
+#5 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\codeigniter\public\index.php(42): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-01-03 06:46:54 --> Invalid file: templates/Head.php
+#0 C:\xampp\htdocs\codeigniter\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/Head....')
+#1 C:\xampp\htdocs\codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('templates/Head', Array, true)
+#2 C:\xampp\htdocs\codeigniter\app\Controllers\Aufgaben.php(9): view('templates/Head')
+#3 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(824): App\Controllers\Aufgaben->index()
+#4 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aufgaben))
+#5 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\codeigniter\public\index.php(42): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-01-03 06:47:38 --> Invalid file: templates/Head.php
+#0 C:\xampp\htdocs\codeigniter\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/Head....')
+#1 C:\xampp\htdocs\codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('templates/Head', Array, true)
+#2 C:\xampp\htdocs\codeigniter\app\Controllers\Aufgaben.php(9): view('templates/Head')
+#3 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(824): App\Controllers\Aufgaben->index()
+#4 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aufgaben))
+#5 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\codeigniter\public\index.php(42): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-01-03 06:47:39 --> Invalid file: templates/Head.php
+#0 C:\xampp\htdocs\codeigniter\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/Head....')
+#1 C:\xampp\htdocs\codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('templates/Head', Array, true)
+#2 C:\xampp\htdocs\codeigniter\app\Controllers\Aufgaben.php(9): view('templates/Head')
+#3 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(824): App\Controllers\Aufgaben->index()
+#4 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aufgaben))
+#5 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\codeigniter\public\index.php(42): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-01-03 06:47:54 --> Invalid file: templates/Head.php
+#0 C:\xampp\htdocs\codeigniter\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/Head....')
+#1 C:\xampp\htdocs\codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('templates/Head', Array, true)
+#2 C:\xampp\htdocs\codeigniter\app\Controllers\Aufgaben.php(9): view('templates/Head')
+#3 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(824): App\Controllers\Aufgaben->index()
+#4 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aufgaben))
+#5 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\codeigniter\public\index.php(42): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-01-03 06:49:15 --> Invalid file: templates/Head.php
+#0 C:\xampp\htdocs\codeigniter\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/Head....')
+#1 C:\xampp\htdocs\codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('templates/Head', Array, true)
+#2 C:\xampp\htdocs\codeigniter\app\Controllers\Aufgaben.php(9): view('templates/Head')
+#3 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(824): App\Controllers\Aufgaben->index()
+#4 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aufgaben))
+#5 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\codeigniter\public\index.php(42): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-01-03 07:06:28 --> Invalid file: templates/Head.php
+#0 C:\xampp\htdocs\codeigniter\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/Head....')
+#1 C:\xampp\htdocs\codeigniter\system\Common.php(1097): CodeIgniter\View\View->render('templates/Head', Array, true)
+#2 C:\xampp\htdocs\codeigniter\app\Controllers\Personen.php(9): view('templates/Head')
+#3 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(824): App\Controllers\Personen->index()
+#4 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Personen))
+#5 C:\xampp\htdocs\codeigniter\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\codeigniter\public\index.php(42): CodeIgniter\CodeIgniter->run()
+#7 {main}
