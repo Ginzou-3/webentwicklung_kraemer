@@ -17,9 +17,7 @@
 
         <!------ Anmeldung   ----->
         <div class="col-md-8 ">
-            <?= form_open('login/index', array('role' => 'form')) ?>
-
-
+            <form action="login" method="post">
 
             <!-- Email input -->
             <div class="form-group">

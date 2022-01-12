@@ -51,44 +51,57 @@
                         foreach ($personen[0] as $key => $value) {
                             echo(" <td> " . $personen[$i][$key] . ("</td>"));
                         }
-                        echo(("<td><div class=\"form-check\">
-                            <input class=\"form-check-input\" type=\"checkbox\" value=\"\">
-                            </div></td>"));
+                        ?>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="">
+                            </div>
+                        </td>
 
-                        echo(("<td> 
+                        <td>
+                            <form action="<?= base_url('Personen/submit_edit') ?>" method="post">
+                            <button class='btn'><i class="far fa-edit"></i></button>
+                            <button type='submit' name='delete' class='btn' onclick="return confirmDelete();"><i
+                                        class="far fa-trash-alt"></i></button>
+                            </form>
+                        </td>
 
-                                <button class='btn'> <i class=\"far fa-edit\"></i></button>
-                                <button class='btn' > <i class=\"far fa-trash-alt\" ></i></button>
-                                </td>"
-                        ));
-                        echo("</tr>");
+                        </tr>
+
+                        <?php
                     }
                 }
+
                 ?>
+                <script type="text/javascript">
+                    function confirmDelete() {
+                        return confirm('Are you sure you want to delete this category?');
+                    }
+                </script>
                 </tbody>
             </table>
 
 
             <h2>Erstellen</h2>
 
-            <form>
+            <form action="<?= base_url('Personen/submit_edit') ?>" method="post">
                 <div class="form-group">
                     <label>Username:</label>
-                    <input type="text" class="form-control form-control-lg" id="username"
+                    <input type="text" class="form-control form-control-lg" id="username" name="username"
                            placeholder="Username"/>
                 </div>
 
                 <!-- email input -->
                 <div class="form-group">
                     <label>Email-Adresse:</label>
-                    <input type="email" class="form-control form-control-lg" id="email"
+                    <input type="email" class="form-control form-control-lg" id="email" name="email"
                            placeholder="Email-Adresse eingeben"/>
                 </div>
 
                 <!-- Password input -->
                 <div class="form-group">
                     <label>Passwort:</label>
-                    <input type="password" class="form-control form-control-lg" id="passwort"
+                    <input type="password" class="form-control form-control-lg" id="password" name="password"
                            placeholder="Passwort"/>
                 </div>
 
@@ -100,8 +113,8 @@
                 </div>
 
                 <div class="button-group mt-2">
-                    <button type="submit" class="btn btn-primary ">Speichern</button>
-                    <button type="reset" class="btn btn-info ">Reset</button>
+                    <button type="submit" class="btn btn-primary " name="submit">Speichern</button>
+                    <button type="reset" class="btn btn-info " name="reset">Reset</button>
                 </div>
             </form>
 
