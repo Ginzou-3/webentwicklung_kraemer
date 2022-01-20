@@ -61,7 +61,6 @@ class Personen extends BaseController
         echo view('PersonenEdit', $data);
         echo view('templates/footer');
 
-        //redirect()->to(base_url('Personen/submit_edit'));
 
     }
 
@@ -78,19 +77,19 @@ class Personen extends BaseController
             $this->PersonenModel->createPerson();
             return redirect()->to(base_url('Personen'));
         } //Person ändern
+
         elseif (isset($_POST['edit'])) {
-            echo("Edit");
 
             $this->PersonenModel->updatePerson();
             return redirect()->to(base_url('Personen'));
 
         } // Person löschen
         elseif (isset($_POST['delete'])) {
-            echo "delete";
             $this->PersonenModel->deletePerson();
             return redirect()->to(base_url('Personen'));
+            
         } // Abbrechen
-        elseif (isset($_POST['btnAbbrechen'])) {
+        elseif (isset($_POST['reset'])) {
             return redirect()->to(base_url('Personen'));
         }
     }
