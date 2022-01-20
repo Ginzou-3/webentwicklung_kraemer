@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Models\PersonenModel;
 
 class Personen extends BaseController
 {
-    public function __construct(){
+    public function __construct()
+    {
         $this->PersonenModel = new PersonenModel();
 
         /*if (session()->get('loggedin')== NULL){
@@ -13,19 +15,26 @@ class Personen extends BaseController
         }*/
 
     }
+
     public function index()
     {
         $data['personen'] = $this->PersonenModel->getCredentials();
+
 
         echo view("templates/Header");
         echo view('Personen', $data);
         echo view("templates/Footer");
     }
 
-    public function index_edit(){
+    public function index_edit()
+    {
+        $data ['personen'] = $this->PersonenModel->getpersonen();
 
-        $data ['title'] = "Personendaten bearbeiten";
-        $data ['person'] = $this->PersonenModel->getpersonen();
+        //echo("<pre>");
+        //var_dump($_POST);
+        //var_dump($data);
+        //echo("</pre>");
+
 
         echo view('templates/header');
         echo view('person/PersonenEdit', $data);
@@ -33,41 +42,57 @@ class Personen extends BaseController
 
     }
 
-    public function ced_edit($id = 0, $todo = 0) {
+    public function ced_edit($email = NULL, $todo = 0)
+    {
 
         // Todo: 0 = create, 1 = Bearbeiten, 2 = löschen
         $data['todo'] = $todo;
         // Person bearbeiten oder löschen
-        if($id > 0 && ($todo == 1 || $todo == 2 ))
-            $data['personen'] = $this->PersonenModel->getpersonen($id);
+        if ($email != NULL && ($todo == 1 || $todo == 2))
+            $data['personen'] = $this->PersonenModel->getpersonen($email);
 
-        echo view( 'templates/header');
-        echo view( 'personen/edit', $data);
-        echo view( 'templates/footer');
+        echo("<pre>");
+        var_dump($email);
+        echo "ced edit";
+        echo("</pre>");
+
+
+        echo view('templates/header');
+        echo view('PersonenEdit', $data);
+        echo view('templates/footer');
+
+        //redirect()->to(base_url('Personen/submit_edit'));
 
     }
 
-    public function submit_edit() {
+    public function submit_edit()
+    {
 
-        // Person ändern
-        if(isset($_POST['submit'] )) {
+        //echo("<pre>");
+        //var_dump($_POST);
+        //echo("</pre>");
 
-            // Daten speichern
-            if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password'])) {
-                $this->PersonenModel->createPerson();
-            }
+        // Person hinzufügen
+        if (isset($_POST['submit'])) {
+
+            $this->PersonenModel->createPerson();
+            return redirect()->to(base_url('Personen'));
+        } //Person ändern
+        elseif (isset($_POST['edit'])) {
+            echo("Edit");
+
+            $this->PersonenModel->updatePerson();
             return redirect()->to(base_url('Personen'));
 
-        }
-        // Person löschen
+        } // Person löschen
         elseif (isset($_POST['delete'])) {
+            echo "delete";
             $this->PersonenModel->deletePerson();
             return redirect()->to(base_url('Personen'));
-        }
-        // Abbrechen
+        } // Abbrechen
         elseif (isset($_POST['btnAbbrechen'])) {
-            return redirect()->to(base_url('Personen/index_edit/'));
+            return redirect()->to(base_url('Personen'));
         }
-
     }
+
 }

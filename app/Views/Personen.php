@@ -59,11 +59,20 @@
                         </td>
 
                         <td>
-                            <form action="<?= base_url('Personen/submit_edit') ?>" method="post">
-                            <button class='btn'><i class="far fa-edit"></i></button>
-                            <button type='submit' name='delete' class='btn' onclick="return confirmDelete();"><i
+
+
+                            <a href="<?= base_url('/Personen/ced_edit/' . $personen[$i]['EMail'] . '/1/') ?>">
+                                <button type="submit" name="edit" id="edit" class='btn'><i class="far fa-edit"></i>
+                                </button>
+                            </a>
+
+                            <a href="<?= base_url('/Personen/ced_edit/' . $personen[$i]['EMail'] . '/2/') ?>">
+                                <button type='submit' id="delete " name='delete' class='btn'
+                                <!--onclick="return confirmDelete();" --> <i
                                         class="far fa-trash-alt"></i></button>
-                            </form>
+                            </a>
+
+
                         </td>
 
                         </tr>
@@ -73,11 +82,13 @@
                 }
 
                 ?>
+                <!--
                 <script type="text/javascript">
                     function confirmDelete() {
                         return confirm('Are you sure you want to delete this category?');
                     }
                 </script>
+                -->
                 </tbody>
             </table>
 
@@ -85,6 +96,7 @@
             <h2>Erstellen</h2>
 
             <form action="<?= base_url('Personen/submit_edit') ?>" method="post">
+
                 <div class="form-group">
                     <label>Username:</label>
                     <input type="text" class="form-control form-control-lg" id="username" name="username"

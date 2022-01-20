@@ -24,12 +24,13 @@ class PersonenModel extends Model{
     }
 
     public function getpersonen($email = NULL){
-        $this->db->query('SELECT * FROM mitglieder');
+        $this->personen = $this->db->table('mitglieder');
+        $this->personen->select('*');
 
         IF ($email != NULL)
             $this->personen->where('mitglieder.EMail', $email);
 
-        $this->personen->orderBy('Name');
+        $this->personen->orderBy('Username');
         $result = $this->personen->get();
 
         if ($email != NULL)
@@ -51,6 +52,18 @@ class PersonenModel extends Model{
         $this->personen = $this->db->table('mitglieder');
         $this->personen->where('mitglieder.EMail', $_POST['email']);
         $this->personen->delete();
+    }
+
+    public function updatePerson() {
+
+        echo("<pre>");
+        echo var_dump($_POST);
+        echo("</pre>");
+
+        $this->personen = $this->db->table('mitglieder');
+        $this->personen->where('mitglieder.EMail', $_POST['email']);
+        $this->personen->update(array('Username' => $_POST['username'],
+            'EMail' => $_POST['email']));
     }
 
 
