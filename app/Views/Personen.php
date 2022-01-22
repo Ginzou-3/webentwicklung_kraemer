@@ -31,9 +31,11 @@
                     <?php
                     if (isset($personen[0]) && !(empty($personen))) {
                         foreach ($personen[0] as $key => $value) {
-                            echo(" <th> ");
-                            echo($key);
-                            echo("</th>");
+                            if ($key != "id") {
+                                echo(" <th> ");
+                                echo($key);
+                                echo("</th>");
+                            }
                         }
                     }
                     ?>
@@ -49,7 +51,9 @@
                     for ($i = 0; $i < count($personen); $i++) {
                         echo("<tr>");
                         foreach ($personen[0] as $key => $value) {
-                            echo(" <td> " . $personen[$i][$key] . ("</td>"));
+                            if($key != 'id') {
+                                echo(" <td> " . $personen[$i][$key] . ("</td>"));
+                            }
                         }
                         ?>
                         <td>
@@ -61,12 +65,12 @@
                         <td>
 
 
-                            <a href="<?= base_url('/Personen/ced_edit/' . $personen[$i]['EMail'] . '/1/') ?>">
+                            <a href="<?= base_url('/Personen/ced_edit/' . $personen[$i]['id'] . '/1/')?>">
                                 <button type="submit" name="edit" id="edit" class='btn'><i class="far fa-edit"></i>
                                 </button>
                             </a>
 
-                            <a href="<?= base_url('/Personen/ced_edit/' . $personen[$i]['EMail'] . '/2/') ?>">
+                            <a href="<?= base_url('/Personen/ced_edit/' . $personen[$i]['id'] . '/2/') ?>">
                                 <button type='submit' id="delete " name='delete' class='btn'
                                 <!--onclick="return confirmDelete();" --> <i
                                         class="far fa-trash-alt"></i></button>

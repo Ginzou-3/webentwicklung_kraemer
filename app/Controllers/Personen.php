@@ -30,11 +30,6 @@ class Personen extends BaseController
     {
         $data ['personen'] = $this->PersonenModel->getpersonen();
 
-        //echo("<pre>");
-        //var_dump($_POST);
-        //var_dump($data);
-        //echo("</pre>");
-
 
         echo view('templates/header');
         echo view('person/PersonenEdit', $data);
@@ -42,19 +37,14 @@ class Personen extends BaseController
 
     }
 
-    public function ced_edit($email = NULL, $todo = 0)
+    public function ced_edit($id = 0, $todo = 0)
     {
 
         // Todo: 0 = create, 1 = Bearbeiten, 2 = löschen
         $data['todo'] = $todo;
         // Person bearbeiten oder löschen
-        if ($email != NULL && ($todo == 1 || $todo == 2))
-            $data['personen'] = $this->PersonenModel->getpersonen($email);
-
-        echo("<pre>");
-        var_dump($email);
-        echo "ced edit";
-        echo("</pre>");
+        if ($id != 0 && ($todo == 1 || $todo == 2))
+            $data['personen'] = $this->PersonenModel->getpersonen($id);
 
 
         echo view('templates/header');
@@ -66,10 +56,6 @@ class Personen extends BaseController
 
     public function submit_edit()
     {
-
-        //echo("<pre>");
-        //var_dump($_POST);
-        //echo("</pre>");
 
         // Person hinzufügen
         if (isset($_POST['submit'])) {
@@ -84,11 +70,12 @@ class Personen extends BaseController
             return redirect()->to(base_url('Personen'));
 
         } // Person löschen
+
         elseif (isset($_POST['delete'])) {
             $this->PersonenModel->deletePerson();
             return redirect()->to(base_url('Personen'));
-            
         } // Abbrechen
+
         elseif (isset($_POST['reset'])) {
             return redirect()->to(base_url('Personen'));
         }

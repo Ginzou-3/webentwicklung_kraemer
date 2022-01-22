@@ -8,7 +8,7 @@ class PersonenModel extends Model{
 
     public function getCredentials(){
 
-        $result = $this->db->query('SELECT Username, EMail FROM mitglieder');
+        $result = $this->db->query('SELECT Username, EMail, id FROM mitglieder');
         return $result->getResultArray();
 
     }
@@ -23,17 +23,17 @@ class PersonenModel extends Model{
         return $result->getRowArray();
     }
 
-    public function getpersonen($email = NULL){
+    public function getpersonen($id = 0){
         $this->personen = $this->db->table('mitglieder');
         $this->personen->select('*');
 
-        IF ($email != NULL)
-            $this->personen->where('mitglieder.EMail', $email);
+        IF ($id != 0)
+            $this->personen->where('mitglieder.id', $id);
 
         $this->personen->orderBy('Username');
         $result = $this->personen->get();
 
-        if ($email != NULL)
+        if ($id != 0)
             return $result->getRowArray();
         else
             return $result->getResultArray();
@@ -45,7 +45,7 @@ class PersonenModel extends Model{
         $this->personen->insert(array(
             'Username' => $_POST['username'],
             'EMail' => $_POST['email'],
-            'password' => password_hash($_POST['password'], PASSWORD_DEFAULT)));
+            'Password' => password_hash($_POST['password'], PASSWORD_DEFAULT)));
 
     }
     public function deletePerson() {
@@ -56,14 +56,11 @@ class PersonenModel extends Model{
 
     public function updatePerson() {
 
-        echo("<pre>");
-        echo var_dump($_POST);
-        echo("</pre>");
-
         $this->personen = $this->db->table('mitglieder');
-        $this->personen->where('mitglieder.EMail', $_POST['email']);
+        $this->personen->where('mitglieder.id', $_POST['id']);
         $this->personen->update(array('Username' => $_POST['username'],
-            'EMail' => $_POST['email']));
+            'EMail' => $_POST['email'],
+            'Password' => password_hash($_POST['password'], PASSWORD_DEFAULT)));
     }
 
 

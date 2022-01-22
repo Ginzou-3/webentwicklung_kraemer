@@ -41,9 +41,15 @@
                     <div class="form-group">
                         <label>Passwort:</label>
                         <input type="password" class="form-control form-control-lg" id="password" name="password"
-                               placeholder="Passwort"/>
+                               placeholder="Passwort" value="<?= $personen['Password'] ?>"/>
                     </div>
                 <?php endif ?>
+
+                <div class="form-group">
+                    <input type="hidden" class="form-control form-control-lg" id="id" name="id"
+                           placeholder="id" value="<?= $personen['id'] ?>"/>
+                </div>
+
 
                 <?php if ($todo == 1) : ?>
                     <div class="form-check">
