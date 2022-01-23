@@ -59,9 +59,17 @@ class Personen extends BaseController
 
         // Person hinzufügen
         if (isset($_POST['submit'])) {
+            if ($this->validation->run($_POST, 'personenbearbeiten')) {
+                $this->PersonenModel->createPerson();
+                return redirect()->to(base_url('Personen'));
+            }else{
+                $data['personen'] = $_POST;
+                $data['error'] = $this->validation->getErrors();
 
-            $this->PersonenModel->createPerson();
-            return redirect()->to(base_url('Personen'));
+                echo view('templates/header');
+                echo view('personen');
+                echo view('templates/footer');
+            }
         } //Person ändern
 
         elseif (isset($_POST['edit'])) {
@@ -81,6 +89,7 @@ class Personen extends BaseController
         }
     }
 
+    //Nur als Hilfe wie es Kalenborn gemacht hat
     public function submit_edit_val()
     {
         if (isset($_POST['delete'])) {
