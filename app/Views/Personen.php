@@ -103,22 +103,37 @@
 
                 <div class="form-group">
                     <label>Username:</label>
-                    <input type="text" class="form-control form-control-lg" id="username" name="username"
+                    <input type="text" class="form-control form-control-lg"
+                        <?=(isset($error['username']))?'is-invalid':''?>
+                           id="username" name="username"
                            placeholder="Username"/>
+                    <div class="ivalid-feedback">
+                        <?=(isset($error['username']))?$error['username']:''?>
+                    </div>
                 </div>
 
                 <!-- email input -->
                 <div class="form-group">
                     <label>Email-Adresse:</label>
-                    <input type="email" class="form-control form-control-lg" id="email" name="email"
+                    <input type="email" class="form-control form-control-lg"
+                           <?=(isset($error['email']))?'is-invalid':''?>
+                           id="email" name="email"
                            placeholder="Email-Adresse eingeben"/>
+                    <div class="ivalid-feedback">
+                        <?=(isset($error['email']))?$error['email']:''?>
+                    </div>
                 </div>
 
                 <!-- Password input -->
                 <div class="form-group">
                     <label>Passwort:</label>
-                    <input type="password" class="form-control form-control-lg" id="password" name="password"
+                    <input type="password" class="form-control form-control-lg"
+                        <?=(isset($error['password']))?'is-invalid':''?>
+                           id="password" name="password"
                            placeholder="Passwort"/>
+                    <div class="ivalid-feedback">
+                        <?=(isset($error['password']))?$error['password']:''?>
+                    </div>
                 </div>
 
                 <div class="form-check">

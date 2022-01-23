@@ -81,4 +81,32 @@ class Personen extends BaseController
         }
     }
 
+    public function submit_edit_val()
+    {
+        if (isset($_POST['delete'])) {
+            $data['todo'] = 1;
+            if ($this->validation->run($_POST, 'personenbearbeiten')) {
+                //Daten speichern
+                if (isset($_POST['id']) && $_POST['id'] != '') {
+                    $this->PersonenModel->updatePerson();
+                }
+                else {
+                    $this->PersonenModel->createPerson();
+                }
+                return redirect()->to(base_url('personen/index_val'));
+
+            }
+            else {
+                //Fehlermedlung generieren
+                $data['personen'] = $_POST;
+                $data['error'] = $this->validation->getErrors();
+
+                echo view('templates/header');
+                echo view('personen', $data);
+                echo view('templates/footer');
+            }
+        }
+    }
+
+
 }

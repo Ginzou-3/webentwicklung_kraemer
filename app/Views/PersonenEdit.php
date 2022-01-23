@@ -25,14 +25,14 @@
                 <div class="form-group">
                     <label>Username:</label>
                     <input type="text" class="form-control form-control-lg" id="username" name="username"
-                           placeholder="Username" value="<?= $personen['Username'] ?>"/>
+                           placeholder="Username" value="<?= $personen['Username'] ?>" <?=($todo==2)? 'disabled' : ''?>/>
                 </div>
 
                 <!-- email input -->
                 <div class="form-group">
                     <label>Email-Adresse:</label>
                     <input type="email" class="form-control form-control-lg" id="email" name="email"
-                           placeholder="Email-Adresse eingeben" value="<?= $personen['EMail'] ?>"/>
+                           placeholder="Email-Adresse eingeben" value="<?= $personen['EMail'] ?>" <?=($todo==2)? 'disabled' : ''?>/>
                 </div>
 
                 <!-- Password input -->
@@ -41,13 +41,13 @@
                     <div class="form-group">
                         <label>Passwort:</label>
                         <input type="password" class="form-control form-control-lg" id="password" name="password"
-                               placeholder="Passwort" value="<?= $personen['Password'] ?>"/>
+                               placeholder="Passwort" value="<?= $personen['Password'] ?>" />
                     </div>
                 <?php endif ?>
 
                 <div class="form-group">
                     <input type="hidden" class="form-control form-control-lg" id="id" name="id"
-                           placeholder="id" value="<?= $personen['id'] ?>"/>
+                           placeholder="id" value="<?= $personen['id'] ?>" />
                 </div>
 
 
