@@ -1,5 +1,4 @@
-
-    <title>Projekte</title>
+<title>Projekte</title>
 </head>
 <body>
 <div class="container-fluid">
@@ -12,14 +11,37 @@
     <div class="row">
 
         <!----    Navbar    ---->
-        <?php include "templates/Navbar.html" ?>
+        <div class="col-sm-2">
+            <nav class="navbar bg-light">
 
+                <!-- Links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('Login/logout') ?>">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Projekte">Projekte</a>
+                    </li>
 
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown" style = <?= (isset($_POST["choose"])) ? "" : "display:none"  ?> >
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Aktuelles Projekt
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="<?= base_url('Reiter') ?>">Reiter</a>
+                            <a class="dropdown-item" href="<?= base_url('Aufgaben') ?>">Aufgaben</a>
+                            <a class="dropdown-item" href="<?= base_url('Personen') ?>">Mitglieder</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <!------ Hauptkontent   ----->
         <div class="col-md-8 ">
 
             <!-- projekt -->
-            <form action="<?= base_url('Projekte/submit_edit') ?>" , method="post">
+            <form action="<?= base_url('Projekte') ?>" , method="post">
 
                 <!-- projekt -->
                 <div class="form-group">
@@ -52,8 +74,12 @@
                     <button type="submit" class="btn btn-danger " id="delete" name="delete">Löschen</button>
                 </div>
 
+            </form>
+
 
             <h2>Projekt bearbeiten/erstellen:</h2>
+
+            <form action="<?= base_url('Projekte/submit_edit') ?>" , method="post">
 
                 <!-- name input -->
                 <div class="form-outline mb-4">

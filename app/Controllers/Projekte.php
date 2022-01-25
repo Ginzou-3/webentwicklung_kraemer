@@ -9,6 +9,11 @@ class Projekte extends BaseController
     public function __construct()
     {
         $this->ProjekteModel = new ProjekteModel();
+
+        if (session()->get('loggedin')== NULL){
+            header("Location: " . base_url(). "/Login");
+            exit();
+        }
     }
 
     public function index()

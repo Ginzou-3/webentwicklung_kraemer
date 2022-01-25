@@ -10,9 +10,11 @@ class Personen extends BaseController
     {
         $this->PersonenModel = new PersonenModel();
 
-        /*if (session()->get('loggedin')== NULL){
-            return redirect()->to(base_url() . '/login/index');
-        }*/
+        if (session()->get('loggedin')== NULL){
+            header("Location: " . base_url(). "/Login");
+            exit();
+        }
+
 
     }
 

@@ -15,9 +15,10 @@ class Aufgaben extends BaseController
         $this->ReiterModel = new ReiterModel();
         $this->PersonenModel = new PersonenModel();
 
-        /*if (session()->get('loggedin')== NULL){
-            return redirect()->to(base_url() . '/login/index');
-        }*/
+        if (session()->get('loggedin')== NULL){
+            header("Location: " . base_url(). "/Login");
+            exit();
+        }
 
     }
     public function index()
@@ -33,14 +34,15 @@ class Aufgaben extends BaseController
 
 
 
-    public function ced_edit($id = 0, $todo = 0)
+    public function ced_edit($id = NULL, $todo = 0)
     {
 
         // Todo: 0 = create, 1 = Bearbeiten, 2 = löschen
         $data['todo'] = $todo;
         // Person bearbeiten oder löschen
-        if ($id != 0 && ($todo == 1 || $todo == 2))
+        if ($id != NULL && ($todo == 1 || $todo == 2))
             $data['aufgaben'] = $this->AufgabenModel->getaufgaben($id);
+
 
 
         echo view('templates/header');

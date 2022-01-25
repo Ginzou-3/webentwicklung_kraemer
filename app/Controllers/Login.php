@@ -10,6 +10,8 @@ class Login extends BaseController
         $this->PersonenModel = new PersonenModel();
         $this->session = \Config\Services::session();
 
+
+
     }
 
     public function index()
@@ -43,6 +45,6 @@ class Login extends BaseController
 
     public function logout(){
         session()->destroy();
-        return redirect()->to(base_url() . '/login');
+        return redirect()->to(base_url() . '/Login');
     }
 }

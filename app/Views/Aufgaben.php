@@ -65,12 +65,12 @@
                 <td>
 
 
-                    <a href="<?= base_url('/Aufgaben/ced_edit/' . $personen[$i]['id'] . '/1/')?>">
+                    <a href="<?= base_url('/Aufgaben/ced_edit/' . $personen[$i]['Name'] . '/1/')?>">
                         <button type="submit" name="edit" id="edit" class='btn'><i class="far fa-edit"></i>
                         </button>
                     </a>
 
-                    <a href="<?= base_url('/Aufgaben/ced_edit/' . $personen[$i]['id'] . '/2/') ?>">
+                    <a href="<?= base_url('/Aufgaben/ced_edit/' . $personen[$i]['Name'] . '/2/') ?>">
                         <button type='submit' id="delete " name='delete' class='btn'
                         <!--onclick="return confirmDelete();" --> <i
                                 class="far fa-trash-alt"></i></button>
@@ -149,7 +149,7 @@
                 <!-- dropdown zustaendig -->
                 <div class="form-group">
                     <label class="form-label" for="selectPerson">Zuständig:</label>
-                    <select class="custom-select" id="selectPerson" name="selectPerson">
+                    <select class="custom-select" id="selectPerson" name="selectPerson" multiple="">
                         <option>- bitte auswählen -</option>
                         <?php
                         if (isset($mitglieder) && !(empty($mitglieder))) {

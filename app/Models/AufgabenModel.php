@@ -8,26 +8,27 @@ class AufgabenModel extends Model{
 
     public function getAll(){
 
-        $result = $this->db->query('SELECT * FROM aufgaben');
+        $this->aufgaben = $this->db->table('aufgaben');
+        $this->aufgaben->select("aufgaben.*, group_concat(mitglieder.Username Separator \", \")  As Mitglieder");
+        $this->aufgaben->join("mitglieder", "aufgaben.erstellerid = mitglieder.id", "left");
+        $this->aufgaben->groupBy("aufgaben.Name");
+        $result = $this->aufgaben->get();
+
         return $result->getResultArray();
 
     }
 
-    public function getaufgaben($id = 0){
+    public function getaufgaben($name = null){
         $this->aufgaben = $this->db->table('aufgaben');
-        $this->aufgaben->select('*');
-
-        IF ($id != 0)
-            $this->aufgaben->where('aufgaben.id', $id);
-
-        $this->aufgaben->orderBy('Name');
+        $this->aufgaben->select("aufgaben.*, group_concat(mitglieder.Username Separator \", \")  As Mitglieder");
+        $this->aufgaben->where("aufgaben.Name", $name);
+        $this->aufgaben->join("mitglieder", "aufgaben.erstellerid = mitglieder.id", "left");
+        $this->aufgaben->groupBy("aufgaben.Name");
         $result = $this->aufgaben->get();
 
-        if ($id != 0)
-            return $result->getRowArray();
-        else
-            return $result->getResultArray();
+        return $result->getRowArray();
     }
+
 
     public function createAufgaben() {
         $this->aufgaben = $this->db->table('aufgaben');
@@ -57,7 +58,7 @@ class AufgabenModel extends Model{
             'Erstellungsdatum' => $_POST['date'],
             'Fälligkeitsdatum' => $_POST['date_end'],
             'reiterid' => $_POST['reiter'],
-            'erstellerid' => $_POST['ersteller']));
+            'erstellerid' => "1"));
     }
 
 }

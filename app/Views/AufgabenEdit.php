@@ -56,7 +56,7 @@
                 <div class="form-group">
                     <label>Zuständig:</label>
                     <input type="text" class="form-control form-control-lg" id="ersteller" name="ersteller"
-                           value="<?= $aufgaben['erstellerid'] ?>"/>
+                           value="<?= $aufgaben['Mitglieder'] ?>"/>
                 </div>
 
 
