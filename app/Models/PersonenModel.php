@@ -46,7 +46,6 @@ class PersonenModel extends Model{
             'Username' => $_POST['username'],
             'EMail' => $_POST['email'],
             'Password' => password_hash($_POST['password'], PASSWORD_DEFAULT)));
-
     }
     public function deletePerson() {
         $this->personen = $this->db->table('mitglieder');

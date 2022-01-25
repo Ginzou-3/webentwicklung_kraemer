@@ -41,24 +41,19 @@ class Validation
     // Rules
     //--------------------------------------------------------------------
 
-    public $personenbearbeiten = [
-        'username'  => 'required',
-        'email'     => 'required',
-        'password'  => 'required|integer|min_length[2]'
+    public $login = [
+        'email' => 'required|valid_email',
+        'password' => 'required',
+        'checkbox' => 'String'
     ];
 
-    public $personenbearbeiten_error =[
-        'username'      =>[
-            'required'      => 'Bitte tragen Sie einen Namen ein'
-        ],
-        'email'     =>[
-            'required'      => 'Bitte tragen Sie eine Email ein'
-        ],
-        'password'  =>[
-            'required'      => 'Bitte tragen Sie ein Password ein',
-            'integer'       => 'Bitte nur Zahlenwerte eintragen',
-            'min_length'    => 'Mindestens 3 Zeichen',
-        ]
+    public $login_errors = [
+        'email' => [
+            'required' => 'Bitte tragen Sie eine gültige E-Mail ein.'],
+        'password' => [
+            'required' => 'Bitte geben Sie ein Passwort ein.'],
+        'checkbox' => [
+            'String' => 'Vor dem Login müssen die AGB\'s akzeptiert werden.']
     ];
 
 }

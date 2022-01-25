@@ -59,17 +59,9 @@ class Personen extends BaseController
 
         // Person hinzufügen
         if (isset($_POST['submit'])) {
-            if ($this->validation->run($_POST, 'personenbearbeiten')) {
+
                 $this->PersonenModel->createPerson();
                 return redirect()->to(base_url('Personen'));
-            }else{
-                $data['personen'] = $_POST;
-                $data['error'] = $this->validation->getErrors();
-
-                echo view('templates/header');
-                echo view('personen');
-                echo view('templates/footer');
-            }
         } //Person ändern
 
         elseif (isset($_POST['edit'])) {

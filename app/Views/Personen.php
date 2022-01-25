@@ -86,13 +86,7 @@
                 }
 
                 ?>
-                <!--
-                <script type="text/javascript">
-                    function confirmDelete() {
-                        return confirm('Are you sure you want to delete this category?');
-                    }
-                </script>
-                -->
+
                 </tbody>
             </table>
 

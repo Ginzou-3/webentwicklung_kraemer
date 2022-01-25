@@ -1,4 +1,4 @@
-<title>Personen</title>
+<title>PersonenEdit</title>
 </head>
 <body>
 <div class="container-fluid">
@@ -25,14 +25,14 @@
                 <div class="form-group">
                     <label>Username:</label>
                     <input type="text" class="form-control form-control-lg" id="username" name="username"
-                           placeholder="Username" value="<?= $personen['Username'] ?>" <?=($todo==2)? 'disabled' : ''?>/>
+                           placeholder="Username" value="<?= $personen['Username'] ?>"/>
                 </div>
 
                 <!-- email input -->
                 <div class="form-group">
                     <label>Email-Adresse:</label>
                     <input type="email" class="form-control form-control-lg" id="email" name="email"
-                           placeholder="Email-Adresse eingeben" value="<?= $personen['EMail'] ?>" <?=($todo==2)? 'disabled' : ''?>/>
+                           placeholder="Email-Adresse eingeben" value="<?= $personen['EMail'] ?>"/>
                 </div>
 
                 <!-- Password input -->
