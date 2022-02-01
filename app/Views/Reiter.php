@@ -13,7 +13,7 @@
 
 
         <!----    Navbar    ---->
-        <?php include "templates/Navbar.html" ?>
+        <?php include "templates/Navbar.php" ?>
 
 
         <!------ Tabelle   ----->

@@ -24,9 +24,9 @@
                     </li>
 
                     <!-- Dropdown -->
-                    <li class="nav-item dropdown" style = <?= (isset($_POST["choose"])) ? "" : "display:none"  ?> >
+                    <li class="nav-item dropdown" style= <?= (isset($_SESSION["projekt"])) ? "" : "display:none" ?>>
                         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                            Aktuelles Projekt
+                            <?= (isset($_SESSION["projekt"])) ? $_SESSION["projekt"] : "Aktuelles Projekt" ?>
                         </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="<?= base_url('Reiter') ?>">Reiter</a>
@@ -41,24 +41,28 @@
         <div class="col-md-8 ">
 
             <!-- projekt -->
-            <form action="<?= base_url('Projekte') ?>" , method="post">
+            <form action="<?= base_url('Projekte/submit_edit') ?>" , method="post">
 
                 <!-- projekt -->
                 <div class="form-group">
                     <h2>Projekt Auswählen</h2>
                     <select class="form-control" id="selectfield" name="selectfield">
-                        <option>- bitte auswählen -</option>
+                        <option><?= (isset($_SESSION["projekt"])) ? $_SESSION["projekt"] : "- bitte auswählen -" ?></option>
                         <?php
                         if (isset($aufgaben) && !(empty($aufgaben))) {
                             for ($i = 0; $i < count($aufgaben); $i++) {
-                                echo("<option>");
                                 foreach ($aufgaben[0] as $key => $value) {
-                                    if ($key == 'Name') {
-                                        echo( $aufgaben[$i][$key]);
+                                    if ($key == 'Name' && isset($_SESSION["projekt"]) && $aufgaben[$i][$key] != $_SESSION["projekt"]) {
+                                        echo("<option>");
+                                        echo($aufgaben[$i][$key]);
+                                        echo("</option>");
+                                    } elseif ($key == 'Name' && !isset($_SESSION["projekt"])) {
+                                        echo("<option>");
+                                        echo($aufgaben[$i][$key]);
+                                        echo("</option>");
                                     }
                                 }
                                 ?>
-                                </option>
 
                                 <?php
                             }
@@ -69,18 +73,26 @@
 
                 <!-- buttons projekt -->
                 <div class="button-group mb-2">
-                    <button type="submit" class="btn btn-primary " id="choose" name="choose">Auswählen</button>
-                    <button type="submit" class="btn btn-primary " id="edit" name="edit">Bearbeiten</button>
-                    <button type="submit" class="btn btn-danger " id="delete" name="delete" onclick="confirmDelete()">Löschen</button>
+                <button type="submit" class="btn btn-primary " id="choose" name="choose">Auswählen</button>
+
+                <form action="<?= base_url('Projekte/submit_edit') ?>" , method="post">
+                    <button type="submit" class="btn btn-danger " id="delete" name="delete"
+                            onclick="return confirmDelete()">Löschen
+                    </button>
+                </form>
                 </div>
 
-            </form>
+
+                <?php if (isset($_SESSION["projekt"])): ?>
+                    <a href="<?= base_url('/Projekte/ced_edit/' . $_SESSION["projekt"] . '/1/') ?>">
+                        <button type="submit" class="btn btn-primary ">Bearbeiten</button>
+                    </a>
+                <?php endif ?>
 
 
-            <h2>Projekt bearbeiten/erstellen:</h2>
+                <h2>Projekt erstellen:</h2>
 
-            <form action="<?= base_url('Projekte/submit_edit') ?>" , method="post">
-
+                <form action="<?= base_url('Projekte/submit_edit') ?>" , method="post">
                 <!-- name input -->
                 <div class="form-outline mb-4">
                     <label>Projektname:</label>
@@ -97,13 +109,14 @@
                 <!-- buttons -->
                 <div class="form-outline mb-4">
                     <button type="submit" class="btn btn-primary " id="save" name="save">Speichern</button>
-                    <button type="submit" class="btn btn-info " id="reset" name="reset" >Reset</button>
+                    <button type="submit" class="btn btn-info " id="reset" name="reset">Reset</button>
                 </div>
 
                 <script>
-                        function confirmDelete() {
-                            return confirm('Wollen sie das Projekt löschen?');
-                        }
+                    function confirmDelete() {
+                        return confirm('Wollen sie das Projekt löschen?');
+
+                    }
                 </script>
 
             </form>
@@ -112,5 +125,4 @@
 
     </div>
 
-</div>
 

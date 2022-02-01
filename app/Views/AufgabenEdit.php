@@ -1,17 +1,17 @@
-<title>PersonenEdit</title>
+<title>AufgabenEdit</title>
 </head>
 <body>
 <div class="container-fluid">
 
     <div class="jumbotron">
-        <h1>Aufgabenplaner: Personen</h1>
+        <h1 style="text-align: center">Aufgabenplaner: Aufgaben</h1>
     </div>
 
 
     <div class="row">
 
         <!----    Navbar    ---->
-        <?php include "templates/Navbar.html" ?>
+        <?php include "templates/Navbar.php" ?>
 
 
         <!------ Tabelle   ----->

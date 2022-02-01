@@ -9,8 +9,10 @@ class AufgabenModel extends Model{
     public function getAll(){
 
         $this->aufgaben = $this->db->table('aufgaben');
-        $this->aufgaben->select("aufgaben.*, group_concat(mitglieder.Username Separator \", \")  As Mitglieder");
+        $this->aufgaben->select("aufgaben.*, group_concat(mitglieder.Username Separator \", \")  As Mitglieder, projekte.Name As Reiter, reiter.Name As Projekt");
         $this->aufgaben->join("mitglieder", "aufgaben.erstellerid = mitglieder.id", "left");
+        $this->aufgaben->join("projekte","projekte.id = aufgaben.projekteid", "left");
+        $this->aufgaben->join("reiter","reiter.id = aufgaben.reiterid", "left");
         $this->aufgaben->groupBy("aufgaben.Name");
         $result = $this->aufgaben->get();
 

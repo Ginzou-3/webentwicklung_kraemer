@@ -9,9 +9,6 @@ class Login extends BaseController
     public function __construct(){
         $this->PersonenModel = new PersonenModel();
         $this->session = \Config\Services::session();
-
-
-
     }
 
     public function index()

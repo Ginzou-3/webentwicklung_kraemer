@@ -13,7 +13,7 @@
 
 
         <!----    Navbar    ---->
-        <?php include "templates/Navbar.html" ?>
+        <?php include "templates/Navbar.php" ?>
 
 
         <!----   Tabelle   ---->
@@ -34,7 +34,7 @@
                     <?php
                     if (isset($personen[0])&& !(empty($personen))) {
                         foreach ($personen[0] as $key => $value) {
-                            if($key != 'id'){
+                            if($key != 'id' && $key != 'erstellerid' && $key != 'reiterid' && $key != 'projekteid'){
                                 echo(" <th> ");
                                 echo($key);
                                 echo("</th>");
@@ -53,7 +53,7 @@
                     for ($i = 0; $i < count($personen); $i++) {
                         echo ("<tr>");
                         foreach ($personen[0] as $key => $value) {
-                            if($key != 'id') {
+                            if($key != 'id' && $key != 'erstellerid' && $key != 'reiterid' && $key != 'projekteid') {
                                 echo(" <td> " . $personen[$i][$key] . ("</td>"));
                             }
                         }
