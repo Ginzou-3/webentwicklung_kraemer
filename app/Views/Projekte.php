@@ -71,7 +71,7 @@
                 <div class="button-group mb-2">
                     <button type="submit" class="btn btn-primary " id="choose" name="choose">Auswählen</button>
                     <button type="submit" class="btn btn-primary " id="edit" name="edit">Bearbeiten</button>
-                    <button type="submit" class="btn btn-danger " id="delete" name="delete">Löschen</button>
+                    <button type="submit" class="btn btn-danger " id="delete" name="delete" onclick="confirmDelete()">Löschen</button>
                 </div>
 
             </form>
@@ -97,8 +97,14 @@
                 <!-- buttons -->
                 <div class="form-outline mb-4">
                     <button type="submit" class="btn btn-primary " id="save" name="save">Speichern</button>
-                    <button type="submit" class="btn btn-info " id="reset" name="reset">Reset</button>
+                    <button type="submit" class="btn btn-info " id="reset" name="reset" >Reset</button>
                 </div>
+
+                <script>
+                        function confirmDelete() {
+                            return confirm('Wollen sie das Projekt löschen?');
+                        }
+                </script>
 
             </form>
 
